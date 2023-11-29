@@ -3,9 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TodoList</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/light.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/themes/dark.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@uvarov.frontend/vanilla-calendar/build/vanilla-calendar.min.js" defer></script>
+    <script src="Scripts/jquery.js"></script>
+
+    <link rel="stylesheet" href="Styles/master.css">
+    <title>ToDoList</title>
 </head>
 <body>
-    Inicialization
+
+    <header>
+        <div id="searcher">
+            <label>
+                <img src="icons/search.svg" alt="Search icon" class="ico">
+                <input type="text" id="searcher_input" placeholder="Поиск" >
+            </label>
+        </div>
+
+        <img src="icons/user.svg" alt="User icon" class="ico" id="header_avatar">
+    </header>
+
+    <div id="sidebar">
+        <div id="period_btns">
+            <button class="defaultBtn" id="today">Сегодня</button>
+            <button class="defaultBtn" id="week">На неделю</button>
+        </div>
+        <div class="calendar" id="sidebarCalendar" title="Shift, чтобы выбрать период" ></div>
+        <label id="undone_checkbox"> <input  id="undone_checkbox_input" type="checkbox"> Только невыполненные</label>
+    </div>
+
+    <div id="content_box">
+        <div id="content_header">
+            <p id="todayShown"></p>
+            <div id="sort">
+                <img src="icons/sort.svg" alt="Sort icon" class="ico">
+                Сортировать по дате
+            </div>
+        </div>
+        <div id="content">
+        </div>
+        </div>
+    </div>
+
+    <script src="Scripts/scripts.js"></script>
 </body>
 </html>
